@@ -1,8 +1,8 @@
-#gpgr - GNU Privacy Guard Encryption in Ruby 
+# gpgr - GNU Privacy Guard Encryption in Ruby 
 March 2010, Ryan Stenhouse <ryan@ryanstenhouse.eu> on behalf of [Purchasing
 Card Consultancy Limited][1]
 
-##About
+## About
 
 gpgr is a lightweight and fast wrapper around the <tt>gpg</tt> command
 commonly found on Linux and other Unix-like operating systems.
@@ -15,7 +15,7 @@ If you need something that will elegantly and quickly encrypt files for
 you and make managing the keys used within your application for this 
 purpose a snap, use this. If not, use something else.
 
-##Installation
+## Installation
 
 From Rubygems:
 
@@ -27,7 +27,7 @@ From GitHub:
 	you need it.
 
 
-##Requirements
+## Requirements
 
 gpgr has only really been tested on *nix environments, and indeed the path
 hard-coded by default for the gpg binary will only be meaningful if you're
@@ -71,7 +71,7 @@ For **Mac OS X**, you will first need to install <tt>gpg</tt>, you can do
 this through MacPorts or Frink, but the best way is through [MacGPG][2], just
 [download the latest version][3] and install int <tt>.pkg</tt> file it downloads.
 
-##A Note on Testing
+## A Note on Testing
 
 Since gpgr really is just firing of to the GPG binary to all of the real work, there is little
 to test within gpgr itself. I've added the tests I feel are prudent and useful. Feel free to
@@ -81,7 +81,7 @@ I do take the view, however, that GPG it's self is a very well established and p
 project; and as such - any tests which attempt to test that *gpg* is functioning correctly will
 not be accepted - I'm happy to assume that it is.
 
-##Status
+## Status
 
 Published as a gem, current version 0.0.4
 
