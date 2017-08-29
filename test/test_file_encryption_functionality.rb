@@ -5,7 +5,7 @@ class TestFileEncryptionFunctionality < Test::Unit::TestCase
   def test_file_method_returns_expected_object
     o = Gpgr::Encrypt.file(__FILE__)
     assert_equal Gpgr::Encrypt::GpgFileForEncryption, o.class
-  end  
+  end
 
   def test_default_values_are_corrently_set
     o = Gpgr::Encrypt.file(__FILE__)
@@ -33,16 +33,16 @@ class TestFileEncryptionFunctionality < Test::Unit::TestCase
     assert_raise Gpgr::Encrypt::InvalidEmailException do
       o.encrypt
     end
-    assert !File.exists?(o.file_output)
+    assert !File.exist?(o.file_output)
   end
-  
+
   def test_encrypt_will_not_work_if_source_file_doesnt_exist
     o = Gpgr::Encrypt.file('/tmp/i_just_made_this_up')
     o.using [ 'nobody@example.com' ]
     assert_raise Gpgr::Encrypt::InvalidFileException do
       o.encrypt
     end
-    assert !File.exists?(o.file_output)
+    assert !File.exist?(o.file_output)
   end
- 
+
 end

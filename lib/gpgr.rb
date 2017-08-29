@@ -107,7 +107,7 @@ module Gpgr
       def encrypt
         bad_key = @email_addresses.empty?
 
-        if File.exists?(@file)
+        if File.exist?(@file)
           unless File.readable?(@file)
             raise InvalidFileException.new("File at #{@file} is not readable.") and return
           end
