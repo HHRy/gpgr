@@ -166,10 +166,10 @@ module Gpgr
       # Select the output to grep for, which is different depending on the version
       # of GPG installed. This is tested on 1.4 and 2.1.
       #
-      if `#{Gpgr.command} --version | grep GnuPG`.include?('1.')
-        grep_for = 'pub'
-      else
+      if `#{Gpgr.command} --version | grep GnuPG`.include?('2.')
         grep_for = 'uid'
+      else
+        grep_for = 'pub'
       end
 
       `#{Gpgr.command} --list-public-keys --with-colons | grep #{grep_for}`.split("\n").each do |key|
